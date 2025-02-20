@@ -313,7 +313,7 @@ class Connection:
         use_ipv4: bool = True,
         use_ipv6: bool = True,
         transport_policy: TransportPolicy = TransportPolicy.ALL,
-        ephemeral_ports: Optional[Iterable[int]] = None,
+        ephemeral_ports: Optional[Iterable[int]] = set(range(5000, 5100)),
     ) -> None:
         self.ice_controlling = ice_controlling
         #: Local username, automatically set to a random value.
